@@ -37,4 +37,8 @@ export default class Cart {
         return this.items.filter(item =>  item.getPrice() >= 20);
         return result;
     }
+
+    getProductNames(){
+        return this.items.map(item => item.getName());
+    }
 }
