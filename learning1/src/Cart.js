@@ -1,12 +1,14 @@
-module.exports = function Cart() {
+export default class Cart {
 
-    this.items = [];
+    constructor(){
+        this.items = [];
+    }
 
-    this.add = function(shoppingItem) {
+    add(shoppingItem) {
         this.items.push(shoppingItem);
     }
 
-    this.getTotalPrice = function (discount = price => price) {
+    getTotalPrice(discount = price => price) {
         var totalPrice = 0;
 
         // this.items.forEach(function (item) {
@@ -22,7 +24,7 @@ module.exports = function Cart() {
         return priceWithDiscount;
     }
 
-    this.getVipItems = function () {
+    getVipItems() {
         var result = [];
 
         // this.items.forEach(function (item) {
