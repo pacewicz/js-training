@@ -4,9 +4,7 @@ export default class Cart {
         this.items = [];
     }
 
-    add(shoppingItem) {
-        this.items.push(shoppingItem);
-    }
+    add = shoppingItem => this.items.push(shoppingItem);
 
     getTotalPrice(discount = price => price) {
         var totalPrice = 0;
