@@ -6,8 +6,8 @@ export default class Cart {
 
     add = shoppingItem => this.items.push(shoppingItem);
 
-    getTotalPrice(discount = price => price) {
-        var totalPrice = 0;
+    getTotalPrice = (discount = price => price) => {
+        var totalPrice;
 
         // this.items.forEach(function (item) {
         //     result += item.getTotalPrice();
@@ -22,7 +22,7 @@ export default class Cart {
         return priceWithDiscount;
     }
 
-    getVipItems() {
+    getVipItems = () => {
         var result = [];
 
         // this.items.forEach(function (item) {
@@ -36,7 +36,5 @@ export default class Cart {
         return result;
     }
 
-    getProductNames(){
-        return this.items.map(item => item.getName());
-    }
+    getProductNames = () => this.items.map(item => item.getName());
 }
